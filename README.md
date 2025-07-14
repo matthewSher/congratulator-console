@@ -20,15 +20,19 @@
 ### Обзор функционала
 
 Отображение всего списка дней рождения:
+
 <img src="docs/Показать-всё.gif" width="400" height="">
 
 Добавление нового элемента:
+
 <img src="docs/Добавление.gif" width="400" height="">
 
 Редактирование уже существующего элемента:
+
 <img src="docs/Редактирование.gif" width="400" height="">
 
 Удаление элемента:
+
 <img src="docs/Удаление.gif" width="400" height="">
 
 ---
@@ -38,7 +42,7 @@
 
 Приложение спроектировано с использованием Clean Architecture (Domain → Application → Infrastructure → UI). UML-диаграмма классов выглядит следующим образом:
 
-![[docs/Диаграмма.png]]
+<img src="docs/Диаграмма.png">
 
 ### Используемый стек
 
@@ -46,6 +50,7 @@
 - Microsoft.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.Sqlite
 - Npgsql.EntityFrameworkCore.PostgreSQL
+
 Текстовый UI спроектирован при помощи библиотеки [Spectre.Console](https://github.com/spectreconsole/spectre.console).
 
 ---
@@ -68,14 +73,16 @@ run-postgres.bat
 
 Для того, чтобы использовать PostgreSQL, необходимо в конфигурационном файле `appsettings.Postgres.json`, вставить свой ключ подключения к базе данных (например, `Host=localhost;Port=5432;Database=CongratulatorDb;Username=postgres;Password=<Ваш пароль>`). Сделайте это здесь:
 
-```json
+```JSON
 {
-  "ConnectionStrings": {
-    "DefaultConnection": "<Ваш ключ подключения>"
-  },
-  "Logging": {
-	// ...
-  }
+  {
+    "ConnectionStrings": {
+      "DefaultConnection": "<Ваш_ключ>"
+    },
+    "Logging": {
+      // ...
+    }
+  }
 }
 ```
 
@@ -83,7 +90,9 @@ run-postgres.bat
 ## Сборка проекта
 
 Представлена для основных платформ.
-*Примечание: для отладки проекта с использованием PostgreSQL уберите флаг `--sqlite`*
+
+*Примечание: для отладки проекта с использованием PostgreSQL уберите флаг `--sqlite`*.
+
 ### Windows
 
 Отладка:
