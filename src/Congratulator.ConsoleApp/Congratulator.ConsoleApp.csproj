@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.7" />
+		<PackageReference Include="Spectre.Console" Version="0.50.0" />
+	</ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\Congratulator.Domain\Congratulator.Domain.csproj" />
+    <ProjectReference Include="..\Congratulator.Application\Congratulator.Application.csproj" />
+    <ProjectReference Include="..\Congratulator.Infrastructure\Congratulator.Infrastructure.csproj" />
+	<None Include="appsettings.json">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+	<None Update="appsettings.Postgres.json"
+		CopyToOutputDirectory="Always"
+		CopyToPublishDirectory="Always" />
+  </ItemGroup>
+
+  <PropertyGroup>
+	<RootNamespace>Congratulator.ConsoleApp</RootNamespace>
+	<AssemblyName>Congratulator.ConsoleApp</AssemblyName>
+    <TargetFramework>net9.0</TargetFramework>
+	<OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
